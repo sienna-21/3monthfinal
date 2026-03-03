@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useMemo } from "react";
-import vintageBg from "../assets/vintage-bg.jpg";
-
+import vintagePaper from "../assets/vintage-bg.jpg";
 interface EnvelopePageProps {
   onComplete: () => void;
 }

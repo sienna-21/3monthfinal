@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 350 30% 96%;
+    --foreground: 350 25% 20%;
+
+    --card: 350 25% 94%;
+    --card-foreground: 350 25% 20%;
+
+    --popover: 350 30% 96%;
+    --popover-foreground: 350 25% 20%;
+
+    --primary: 345 40% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 350 20% 90%;
+    --secondary-foreground: 350 25% 25%;
+
+    --muted: 350 15% 92%;
+    --muted-foreground: 350 10% 50%;
+
+    --accent: 345 50% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 345 20% 85%;
+    --input: 345 20% 85%;
+    --ring: 345 40% 65%;
+
+    --radius: 0.75rem;
+
+    /* Custom romantic tokens */
+    --rose-dark: 345 60% 35%;
+    --rose-deep: 345 70% 25%;
+    --cream: 40 30% 95%;
+    --ivory: 40 20% 97%;
+    --blush: 350 50% 88%;
+    --dusty-rose: 345 30% 70%;
+    --wax-seal: 0 60% 35%;
+    --gold-accent: 38 60% 60%;
+    --candle-glow: 38 80% 70%;
+    --vinyl-dark: 0 0% 8%;
+    --blood-red: 0 70% 30%;
+
+    --font-serif: 'Playfair Display', serif;
+    --font-handwritten: 'Dancing Script', cursive;
+    --font-elegant: 'Cormorant Garamond', serif;
+
+    --glow-pink: 0 0 20px hsla(345, 50%, 65%, 0.4);
+    --glow-warm: 0 0 30px hsla(38, 80%, 70%, 0.3);
+    --glow-heart: 0 0 15px hsla(345, 70%, 55%, 0.6);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-elegant);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer components {
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .font-handwritten {
+    font-family: var(--font-handwritten);
+  }
+  .font-elegant {
+    font-family: var(--font-elegant);
+  }
+
+  .text-glow {
+    text-shadow: var(--glow-pink);
+  }
+
+  .text-glow-warm {
+    text-shadow: var(--glow-warm);
+  }
+
+  .box-glow {
+    box-shadow: var(--glow-pink);
+  }
+
+  .box-glow-heart {
+    box-shadow: var(--glow-heart);
+  }
+
+  .romantic-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--blush)) 0%,
+      hsl(var(--primary)) 50%,
+      hsl(var(--dusty-rose)) 100%
+    );
+  }
+
+  .vintage-overlay {
+    position: relative;
+  }
+  .vintage-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, hsla(345, 30%, 20%, 0.15) 100%);
+    pointer-events: none;
+  }
+
+  .sparkle {
+    animation: sparkle 2s ease-in-out infinite;
+  }
+
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .spin-slow {
+    animation: spin 8s linear infinite;
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .lace-border {
+    border-image: repeating-linear-gradient(
+      90deg,
+      hsl(var(--primary) / 0.3) 0px,
+      hsl(var(--primary) / 0.1) 4px,
+      transparent 4px,
+      transparent 8px
+    ) 10;
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 10px hsla(345, 50%, 65%, 0.3); }
+  50% { box-shadow: 0 0 25px hsla(345, 50%, 65%, 0.6); }
+}
+
+@keyframes heart-float {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(45deg) scale(0.3);
+    opacity: 0;
+  }
+}
+
+@keyframes candle-flicker {
+  0%, 100% { opacity: 0.8; }
+  25% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+  75% { opacity: 0.7; }
+}

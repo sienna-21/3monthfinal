@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import vintagePaper from "@/assets/vintage-paper.jpg";
+import vintagePaper from "../assets/vintage-paper.jpg";
 
 const LoveLetter = () => {
   const floatingHearts = Array.from({ length: 15 }, (_, i) => ({

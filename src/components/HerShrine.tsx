@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import shrine1 from "@/assets/shrine-1.jpg";
-import shrine2 from "@/assets/shrine-2.jpg";
-import shrine3 from "@/assets/shrine-3.jpg";
-import shrine4 from "@/assets/shrine-4.jpg";
-import shrine5 from "@/assets/shrine-5.jpg";
-import shrine6 from "@/assets/shrine-6.jpg";
+import shrine1 from "../assets/shrine-1.jpg";
+import shrine2 from "../assets/shrine-2.jpg";
+import shrine3 from "../assets/shrine-3.jpg";
+import shrine4 from "../assets/shrine-4.jpg";
+import shrine5 from "../assets/shrine-5.jpg";
+import shrine6 from "../assets/shrine-6.jpg";
 
 const images = [
   { src: shrine1, label: "my angel", rotate: -6, top: "5%", left: "3%" },

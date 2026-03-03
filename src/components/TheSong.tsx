@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import kenCarson from "@/assets/ken-carson.jpg";
+import kenCarson from "../assets/ken-carson.jpg";
 
 const TheSong = () => {
   return (
